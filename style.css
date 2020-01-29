@@ -41,8 +41,35 @@ header h1 {
     top: 30px;
     right: -30px;
 }
-
-
+.result {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.choices {
+    display: flex;
+    width: 600px;
+    margin: 50px auto;
+    justify-content: space-between;
+}
+.choice button {
+    padding: 20px 50px;
+    font-size: 30px;
+    background-color: rgb(139, 127, 19);
+    border-radius: 5px;
+}
+.choice button:hover {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    cursor: pointer;
+}
+#action-message {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 
 
