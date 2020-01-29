@@ -18,7 +18,7 @@ header h1 {
 .score-board {
     border: 3px solid white;
     width: 200px;
-    margin: 20px auto;
+    margin: 50px auto 20px auto;
     border-radius: 4px;
     color: white;
     font-size: 46px;
@@ -29,7 +29,7 @@ header h1 {
 .badge {
     background-color: rgb(248, 32, 32);
     font-size: 14px;
-    padding: 2px 12px;
+    padding: 5px 12px;
 }
 #user-label {
     position: absolute;
