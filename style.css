@@ -64,6 +64,18 @@ header h1 {
     margin-bottom: -5px;
     cursor: pointer;
 }
+.green-glow {
+    box-shadow: 0 0 35px green;
+    border-radius: 5px;
+}
+.red-glow {
+    box-shadow: 0 0 35px red;
+    border-radius: 5px;
+}
+.blue-glow {
+    box-shadow: 0 0 35px blue;
+    border-radius: 5px;
+}
 #action-message {
     text-align: center;
     color: white;
