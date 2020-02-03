@@ -24,7 +24,11 @@ function win(userChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	const smallUser = 'user'.fontsize(3).sub();
 	const smallComp = 'comp'.fontsize(3).sub();
-	result_div.innerHTML = `${userChoice}${smallUser} beats ${computerChoice.toLowerCase()}${smallComp}. You won!`;
+	if (userScore === 7) {
+		result_div.innerHTML = `GAME OVER! You won! ${userChoice}${smallUser} beats ${computerChoice.toLowerCase()}${smallComp}!`;
+	} else {
+		result_div.innerHTML = `${userChoice}${smallUser} beats ${computerChoice.toLowerCase()}${smallComp}. You won!`;
+	}
 	document.getElementById(userChoice).classList.add('green-glow');
 	setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 300);
 }
@@ -35,7 +39,11 @@ function lose(userChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	const smallUser = 'user'.fontsize(3).sub();
 	const smallComp = 'comp'.fontsize(3).sub();
-	result_div.innerHTML = `${userChoice}${smallUser} loses to ${computerChoice.toLowerCase()}${smallComp}. You lost!`;
+	if (computerScore === 7) {
+		result_div.innerHTML = `GAME OVER! You lost! ${userChoice}${smallUser} loses to ${computerChoice.toLowerCase()}${smallComp}!`;
+	} else {
+		result_div.innerHTML = `${userChoice}${smallUser} loses to ${computerChoice.toLowerCase()}${smallComp}. You lost!`;
+	}
 	document.getElementById(userChoice).classList.add('red-glow');
 	setTimeout(function() {document.getElementById(userChoice).classList.remove('red-glow')}, 300);
 }
@@ -64,14 +72,15 @@ function game(userChoice) {
 
 // event listeners
 function main() {
+	let n = 7;
 	rock_div.addEventListener('click', function() {
-		game('Rock');
+		if (computerScore < n && userScore < n) {game('Rock');}
 	})
 	paper_div.addEventListener('click', function() {
-		game('Paper');
+		if (computerScore < n && userScore < n) {game('Paper');}
 	})
 	scissors_div.addEventListener('click', function() {
-		game('Scissors');
+		if (computerScore < n && userScore < n) {game('Scissors');}
 	})
 }
 
